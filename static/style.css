@@ -73,11 +73,12 @@ body {
     background-size: 400% 400%;
     animation: bgGradient 15s ease infinite;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .bg-container {
@@ -137,6 +138,11 @@ body {
     padding: 40px;
     animation: fadeInUp 1s ease forwards;
     width: 100%;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
 }
 
 .logo-section {
