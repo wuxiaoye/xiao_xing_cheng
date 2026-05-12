@@ -3,147 +3,79 @@
 	<head>
 		<title>首页- 小星城官网</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/favicon.ico" type="image/x-icon"/>
-
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/css/main.css" />
-		
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/css/noscript.css" /></noscript>
-		<style type="text/css">
-			.logo1{
-				/* background-image: url(https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/logo1.png); */
-				background-image: url(https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/logo1.png);
-				background-repeat:no-repeat;
-				background-position:center center;
-				background-origin: border-box;
-				/* background-size: */
-			}
-			/* Loading spinner */
-			.loading-spinner {
-				width: 48px;
-				height: 48px;
-				border: 4px solid rgba(255,255,255,0.15);
-				border-top-color: #fff;
-				border-radius: 50%;
-				animation: spin 0.8s linear infinite !important;
-			}
-			@keyframes spin {
-				to { transform: rotate(360deg); }
-			}
-			/* 覆盖 main.css 中 body.is-loading * 的 animation: none !important */
-			body.is-loading .loading-spinner {
-				animation: spin 0.8s linear infinite !important;
-			}
-		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/style.css" />
 	</head>
 	<body>
-
-		<!-- Loading Overlay -->
-		<div id="loadingOverlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#1e1e2f;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:99999;">
-			<div class="loading-spinner"></div>
-			<p style="color:#fff;font-size:18px;margin-top:24px;font-family:'Microsoft YaHei',sans-serif;letter-spacing:2px;">正在加载中，请稍等...</p>
+		<div class="bg-container">
+			<img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/bg.jpg" alt="Background" class="bg-image" />
+			<div class="overlay"></div>
 		</div>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="logo logo1"></div>
-						<div class="content">
-							<div class="inner">
-								<h1>小星城</h1>
-								<p>我们是由一群追求生活品质的年轻人创立的团队，<br />
-我们热衷于研究科技产品，喜欢生活的美物，致力于开发一系列美观、易用、优雅的科技周边产品。</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">关于我们</a></li>
-								<li><a href="#contact">联系我们</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<article id="intro">
-							<h2 class="major">关于我们</h2>
-							<ul class="icons">
-								<li>
-									茂名滨海新区小星城百货商行是一家聚焦于移动互联网智能设备创新品牌，提供便捷、人性化服务的软件和智能硬件产品。我们热爱智能硬件，为此我们不断研发、优化、创新，只想给用户带来最好的产品！
-								</li>
-							</ul>
-						</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">联系我们</h2>
-								<ul class="icons">
-									<li><a href="javascript:;" class="icon fa-envelope"><span class="label">联系邮箱</span></a></li>
-									<li>
-										13725793705#qq.com （请将#替换成@）
-									</li>
-								</ul>
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">
-							Copyright &copy; <span id="yearNum"></span> 茂名滨海新区小星城百货商行 All Rights Reserved.<br />
-					<a href="http://www.beian.miit.gov.cn" target="_blank">
-						<!-- <img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian1.png" />  -->
-						<img src="https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/beian1.png" /> 
-						粤ICP备17151341号
-					</a>
-					<br />
-					<a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">
-						<!-- <img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian.png" /> -->
-						<img src="https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/beian.png" />
-		 				粤公网安备 44090402441138号
-					</a>
-					
-						</p>
-					</footer>
-
+		
+		<div class="particles" id="particles"></div>
+		
+		<div class="content">
+			<div class="logo-section">
+				<div class="logo-circle">
+					<img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/logo1.png" alt="Logo" class="logo" />
+				</div>
+				<div class="vertical-line"></div>
 			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="https://cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/skel.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/util.js"></script>
-			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/main.js"></script>			
-
-<script type="text/javascript">
-	
-	//隐藏加载提示
-	function hideLoading() {
-		var overlay = document.getElementById('loadingOverlay');
-		if (overlay) {
-			overlay.style.transition = 'opacity 0.4s ease';
-			overlay.style.opacity = '0';
-			setTimeout(function(){ overlay.style.display = 'none'; }, 400);
-		}
-	}
-
-	//所有资源（含CDN）加载完成后隐藏
-	window.addEventListener('load', hideLoading);
-
-	//15秒超时兜底，防止CDN挂掉导致遮罩一直显示
-	// setTimeout(hideLoading, 15000);
-
-	//获取当前年份
-	document.addEventListener('DOMContentLoaded', function(){
-		document.getElementById('yearNum').textContent = new Date().getFullYear();
-	});
-</script>
-
+			
+			<div class="horizontal-line top-line"></div>
+			
+			<h1 class="company-name">小星城</h1>
+			
+			<p class="description">
+				我们是由一群追求生活品质的年轻人创立的团队，<br/>
+				我们热衷于研究科技产品，喜欢生活的美感，致力于开发一系列美观、易用、优雅的科技周边产品。
+			</p>
+			
+			<div class="horizontal-line bottom-line"></div>
+			
+			<div class="button-group">
+				<button class="btn" id="about-btn">关于我们</button>
+				<button class="btn" id="contact-btn">联系我们</button>
+			</div>
+			
+			<footer class="footer">
+				<p class="copyright">COPYRIGHT © 2026 茂名滨海新区小星城百货商行 ALL RIGHTS RESERVED.</p>
+				<div class="beian">
+					<img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian1.png" alt="Beian" class="beian-icon" />
+					<span>粤ICP备17151341号</span>
+				</div>
+				<div class="beian">
+					<img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian.png" alt="Beian" class="beian-icon" />
+					<span>粤公网安备 44090402441138号</span>
+				</div>
+			</footer>
+		</div>
+		
+		<div class="modal" id="about-modal">
+			<div class="modal-content">
+				<span class="close-btn" id="about-close">&times;</span>
+				<h2>关于我们</h2>
+				<hr class="modal-divider" />
+				<p>
+					我们是一家聚焦于移动互联网智能设备创新品牌，提供
+					便捷、人性化服务的软件和智能硬件产品。我们热爱智能硬件，为此我们不断研
+					发、优化、创新，只想给用户带来最好的产品！
+				</p>
+			</div>
+		</div>
+		
+		<div class="modal" id="contact-modal">
+			<div class="modal-content">
+				<span class="close-btn" id="contact-close">&times;</span>
+				<h2>联系我们</h2>
+				<hr class="modal-divider" />
+				<p>
+					
+					13725793705#qq.com（请将#替换成@）
+				</p>
+			</div>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/script.js"></script>
 	</body>
 </html>
