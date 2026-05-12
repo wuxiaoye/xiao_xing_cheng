@@ -4,10 +4,17 @@
 		<title>首页- 小星城官网</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- <link rel="stylesheet" href="../static/style.css" /> -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/style-v2.min.css" />
+		<link rel="stylesheet" href="../static/style.css" />
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/style-v2.min.css" /> -->
 	</head>
 	<body>
+		<div class="loading-screen" id="loading-screen">
+			<div class="loading-content">
+				<div class="loading-spinner"></div>
+				<p class="loading-text">正在加载中，请稍等……</p>
+			</div>
+		</div>
+		
 		<div class="bg-container">
 			<div class="overlay"></div>
 		</div>
@@ -76,6 +83,11 @@
 			</div>
 		</div>
 		
+		<!-- <script src="../static/script.js"></script> -->
 		<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/script.js"></script>
 	</body>
+	<script>
+		
+	window.addEventListener("load",function(){var t=document.getElementById("loading-screen");t&&(setTimeout(function(){t.classList.add("hidden")},500))});
+	</script>
 </html>
