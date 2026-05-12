@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/css/main.css" />
+		
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/css/noscript.css" /></noscript>
 		<style type="text/css">
@@ -75,10 +76,14 @@
 					<footer id="footer">
 						<p class="copyright">
 							Copyright &copy; <span id="yearNum"></span> 茂名滨海新区小星城百货商行 All Rights Reserved.<br />
-					<a href="http://www.beian.miit.gov.cn" target="_blank"><img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian1.png" /> 粤ICP备17151341号</a><br />
-					<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702000675" target="_blank">
+					<a href="http://www.beian.miit.gov.cn" target="_blank">
+						<img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian1.png" /> 
+						粤ICP备17151341号
+					</a>
+					<br />
+					<a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">
 						<img src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/images/beian.png" />
-		 					粤公网安备 44030702000675号
+		 				粤公网安备 44090402441138号
 					</a>
 					
 						</p>
@@ -90,19 +95,16 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/jquery.min.js"></script>
+			<script src="https://cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/skel.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/util.js"></script>
 			<script src="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/assets/js/main.js"></script>
 
 <script type="text/javascript">
 	
-	$(function(){
+	document.addEventListener('DOMContentLoaded', function(){
 		//获取当前年份
-		var today = new Date();
-		var yy = today.getYear();
-		if(yy<1900) yy = yy+1900;
-		$('#yearNum').text(yy);
+		document.getElementById('yearNum').textContent = new Date().getFullYear();
 	});
 </script>
 
