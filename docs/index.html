@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- <link rel="stylesheet" href="../static/style.css" /> -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/style-v2.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wuxiaoye/xiao_xing_cheng/static/style-v3.min.css" />
 
 		<style>
 	/* 加载中动画 */
@@ -95,12 +95,16 @@
 			<footer class="footer">
 				<p class="copyright">COPYRIGHT © 2026 茂名滨海新区小星城百货商行 ALL RIGHTS RESERVED.</p>
 				<div class="beian">
-					<img src="https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/beian1.png" alt="Beian" class="beian-icon" />
-					<span>粤ICP备17151341号</span>
+                    <a class="beian_a" href="https://beian.miit.gov.cn/" target="_blank">
+                        <img src="https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/beian1.png" alt="Beian" class="beian-icon" />
+                        <span>粤ICP备2021117370号</span>
+                    </a>
 				</div>
 				<div class="beian">
-					<img src="https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/beian.png" alt="Beian" class="beian-icon" />
-					<span>粤公网安备 44090402441138号</span>
+                    <a class="beian_a" href="https://beian.mps.gov.cn/" target="_blank">
+                        <img src="https://raw.gitcode.com/gcw_WmIaa45r/xiao_xing_cheng/raw/main/static/images/beian.png" alt="Beian" class="beian-icon" />
+                        <span>粤公网安备44090402441138号</span>
+                    </a>
 				</div>
 			</footer>
 		</div>
@@ -133,8 +137,13 @@
 	</body>
 	<script>
 		
-	window.addEventListener("load",function(){var t=document.getElementById("loading-screen");
-		t&&(setTimeout(function(){t.classList.add("hidden")},500))}
+	window.addEventListener("load",function(){
+        var t=document.getElementById("loading-screen");
+		t&&(setTimeout(function(){
+                    t.classList.add("hidden")
+                },500)
+            )
+        }
 	);
 	</script>
 </html>
